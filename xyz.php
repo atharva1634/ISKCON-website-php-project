@@ -9,7 +9,7 @@ $database = "login";
 $conn = new mysqli($server, $username, $password, $database);
 
 if ($conn->connect_error) {
-    die("❌ Connection to the database failed: " . $conn->connect_error);
+    die(" Connection to the database failed: " . $conn->connect_error);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -18,11 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $confirm_pass = $_POST['confirm_pass'] ?? '';
 
     if (empty($email) || empty($password) || empty($confirm_pass)) {
-        die("❌ Error: All fields are required.");
+        die("Error: All fields are required.");
     }
 
     if ($password !== $confirm_pass) {
-        die("❌ Error: Passwords do not match.");
+        die("Error: Passwords do not match.");
     }
 
     // Check if email already exists
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        die("❌ Error: This email is already registered.");
+        die(" Error: This email is already registered.");
     }
     $stmt->close();
 
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         exit();
     } else {
-        echo "❌ ERROR: " . $stmt->error;
+        echo "ERROR: " . $stmt->error;
     }
 
     $stmt->close();
