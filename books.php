@@ -83,7 +83,7 @@
         <p class="lead text-body-secondary">I read my books every day because even I learn something new when I read my books. These are not my books. I do not write these books</p>
         <p>
           <a href="/majorP2.0/lectures.php" class="btn btn-primary my-2">View our lectures</a>
-          <a href="/stripe-php-master/checkout.php" class="btn btn-secondary my-2">Donate</a>
+          <a href="/majorP2.0/stripe-php-master/checkout.php" class="btn btn-secondary my-2">Donate</a>
         </p>
       </div>
     </div>
