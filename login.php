@@ -9,7 +9,7 @@ $database = "login";
 $conn = new mysqli($server, $username, $password, $database);
 
 if ($conn->connect_error) {
-    die("❌ Connection to the database failed: " . $conn->connect_error);
+    die("Connection to the database failed: " . $conn->connect_error);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password'] ?? '';
 
     if (empty($email) || empty($password)) {
-        die("❌ Error: All fields are required.");
+        die("Error: All fields are required.");
     }
 
     // Check if user exists
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->store_result();
 
     if ($stmt->num_rows == 0) {
-        die("❌ Error: No account found with this email.");
+        die("Error: No account found with this email.");
     }
 
     $stmt->bind_result($hashed_password);
@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } else {
         echo "<script>
-                alert('❌ Error: Incorrect password.');
+                alert('Error: Incorrect password.');
                 window.location.href = 'login.php'; // Redirect to login page
               </script>";
     }
