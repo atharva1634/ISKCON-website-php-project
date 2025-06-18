@@ -87,7 +87,7 @@
         <p class="lead text-body-secondary">If a person hears about, glorifies, meditates upon, worships or simply offers great respect to the Supreme Lord, who is situated within the heart, the Lord will remove from his mind the contamination accumulated during many thousands of lifetimes.</p>
         <p>
           <a href="/majorP2.0/books.php" class="btn btn-primary my-2">View our books</a>
-          <a href="/stripe-php-master/checkout.php" class="btn btn-secondary my-2">Donate</a>
+          <a href="/majorP2.0/stripe-php-master/checkout.php" class="btn btn-secondary my-2">Donate</a>
         </p>
       </div>
     </div>
